@@ -21,5 +21,6 @@ before_script:
     fi
 script:
   - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
+  - sudo ./t
 notification:
   mails: false
