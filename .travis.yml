@@ -7,7 +7,7 @@ env:
     - USELIBCONFIG= USELIBWRAP= USELIBCAP=
     - USELIBCONFIG=1 USELIBWRAP=1 USELIBCAP=1
   global:
-    - cflags=-Wall -Werror
+    - CFLAGS=-Wall -Werror
 
 before_script:
   - |
