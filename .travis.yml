@@ -7,7 +7,7 @@ env:
     - USELIBCONFIG= USELIBWRAP= USELIBCAP=
     - USELIBCONFIG=1 USELIBWRAP=1 USELIBCAP=1
   global:
-    - CFLAGS=-"Wall -Werror"
+    - CFLAGS=-Wall\ -Werror
 
 before_script:
   - if [[ -n "${USELIBCONFIG}" ]]; then
