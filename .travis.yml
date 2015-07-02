@@ -19,7 +19,7 @@ before_script:
   - if [[ -n "${USELIBWRAP}" ]]; then
       sudo apt-get install libwrap0-dev;
     fi
-  - sudo apt-get install libio-socket-inet6-perl
+  - sudo apt-get install libio-socket-inet6-perl lcov
 script:
   - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
   - sudo ./t
