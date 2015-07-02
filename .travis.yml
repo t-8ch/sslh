@@ -11,7 +11,7 @@ env:
 
 before_script:
   - if [[ -n "${USELIBCONFIG}" ]]; then
-      sudo apt-get install libconfig-dev
+      sudo apt-get install libconfig-dev;
     fi
 script:
   - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
