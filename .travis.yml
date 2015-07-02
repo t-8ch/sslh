@@ -2,7 +2,18 @@ language: c
 compiler:
   - clang
   - gcc
+env:
+  matrix:
+    - USELIBCONFIG=
+    - USELIBCONFIG=1
+    - USELIBWRAP=
+    - USELIBWRAP=1
+    - USELIBCAP=
+    - USELIBCAP=1
+  global:
+    - cflags=-Wall -Werror
+
 before_script:
   - sudo apt-get install libconfig-dev
 script:
-  - make
+  - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
