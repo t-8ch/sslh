@@ -10,6 +10,6 @@ env:
     - cflags=-Wall -Werror
 
 before_script:
-  - sudo apt-get install libconfig-dev
+  - [[ -n "${USELIBCONFIG}" ]] && sudo apt-get install libconfig-dev
 script:
   - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
