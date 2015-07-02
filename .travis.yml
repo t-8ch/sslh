@@ -17,7 +17,7 @@ before_script:
       sudo apt-get install libcap-dev;
     fi
   - if [[ -n "${USELIBWRAP}" ]]; then
-      sudo apt-get install libwrap-dev;
+      sudo apt-get install libwrap0-dev;
     fi
 script:
   - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
