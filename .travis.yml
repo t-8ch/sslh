@@ -13,6 +13,9 @@ before_script:
   - if [[ -n "${USELIBCONFIG}" ]]; then
       sudo apt-get install libconfig-dev;
     fi
+  - if [[ -n "${USELIBCAP}" ]]; then
+      sudo apt-get install libcap-dev;
+    fi
 script:
   - make USELIBCONFIG=$USELIBCONFIG USELIBWRAP=$USELIBWRAP USELIBCAP=$USELIBCAP
 notification:
